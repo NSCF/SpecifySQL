@@ -5,5 +5,5 @@ join splocalecontaineritem slci on slci.SpLocaleContainerID = slc.SpLocaleContai
 left join splocaleitemstr sliName on sliName.SpLocaleContainerItemNameID = slci.SpLocaleContainerItemID
 left join splocaleitemstr sliDesc on sliDesc.SpLocaleContainerItemDescID = slci.SpLocaleContainerItemID
 join discipline d on slc.DisciplineID = d.disciplineId
-where d.Name like '%herp%' and slc.name ='locality' and slci.type like '%string%'
+where d.Name like '%herp%' and slc.name ='preparation' and slci.Version = 7
 order by slc.Name, slci.name
